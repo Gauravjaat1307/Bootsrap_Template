@@ -18,18 +18,21 @@
 </head>
 
 <body>
-    <div class="Header" style="">
+    <div class="Header" >
 
         <div class="container">
-            <div class="navbar">
+  
+
+            <nav class="navbar">
+
                 <div class="navbar_logo">
                     <img src="Golflogo.png" alt="Golflogo" width="50" height="50">
                     <span class="navbar_span">
-                        <h2 style="font-size: 24px; font-weight: 700;">Tiya</h2>
-                        <p style="font-size: 10px; font-weight: 700;">GOLF CLUB</p>
+                        <h2 style="font-size: 24px; font-weight: 700;margin: 0px;">Tiya</h2>
+                        <p style="font-size: 10px; font-weight: 700;margin: 0px; ">GOLF CLUB</p>
                     </span>
                 </div>
-
+        
                 <div class="navbar_div">
                     <ul class="navbar_list">
                         <a class="list1">Home</a>
@@ -38,34 +41,86 @@
                         <a class="list1">Events</a>
                         <a class="list1">Contact Us</a>
                         <a class="list1">Pages
-                            <select style="background: transparent; width: 16px; height: 16px; color: white;">
+                            <select style="background: transparent; width: 16px; height: 16px; color: white; border: none;">
                                 <option></option>
                                 <option>Event Listing</option>
                                 <option>Event Detail</option>
                             </select>
                         </a>
                     </ul>
-
+        
                     <div style="margin-left: 12px;">
                         <button class="navbar_button" style="width: 140px; height: 42px;">Member login</button>
                     </div>
-
-
-
-                    <div class="">
-                        <img id="menu" class="mobile_navbar" src="menu.png" width="30px" height="30px">
-                    </div>
-
+        
                 </div>
+        
+                <button id="menuToggle" class="menu-toggle">
+                    <svg class="hamburger" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                    </svg>
+                </button>
+            </nav>
 
+            <div id="overlay" style="display: none;" class="overlay">
 
+                <div class="overlay-header">
+                    <div class="navbar_logo">
+                        <img src="Golflogo.png" alt="Golflogo" width="50" height="50">
+                        <span class="navbar_span">
+                            <h2 style="font-size: 24px; font-weight: 700;margin: 0px;">Tiya</h2>
+                            <p style="font-size: 10px; font-weight: 700;margin: 0px; ">GOLF CLUB</p>
+                        </span>
+                    </div>
+        
+                    <div style="margin-left: 12px;">
+                        <button class="navbar_button" style="width: 140px; height: 42px;">Member login</button>
+                    </div>
+        
+                    
+        
+                    <button id="closeMenu" class="close-menu">
+                        <svg class="close-icon" viewBox="0 0 24 24">
+                            <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+        
+                <div class="overlay-content">
+        
+                    <a href="#" class="menu-item">Home</a>
+                    <a href="#" class="menu-item">About</a>
+                    <a href="#" class="menu-item">Membership</a>
+                    <a href="#" class="menu-item">Events</a>
+                    <a href="#" class="menu-item contact">Contact Us</a>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">
+                            Pages
+                            <svg class="chevron-down" viewBox="0 0 24 24">
+                                <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Event Listing</a>
+                            <a href="#" class="dropdown-item">Event Detail</a>
+                        </div>
+                    </div>
+                </div>
+        
             </div>
+
+            
 
         </div>
 
     </div>
 
-    <div class="Home_section">
+     <div class="Home_section" >
 
         <svg class="Home_section_svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#3D405B" fill-opacity="1"
@@ -193,8 +248,8 @@
                             <input type="email" placeholder="Email address"
                            
                                 style="width: 60%;border: none;font-size: 15px;color: rgb(113, 114, 117);">
-                            <button
-                                style=" border-radius: 18px; background: #f2cc8f;font-size: 18px;padding: 10px; color: white; border: none;width: 150px; height: 45px;">Subscribe</button>
+                            <button class="Subscribe_button"
+                                style=" border-radius: 18px; background: #f2cc8f;font-size: 18px;padding: 10px; color: white; border: none;width: 150px; height: 45px; ">Subscribe</button>
                         </div>
                     </form>
                 </div>
@@ -519,7 +574,7 @@
         </div>
 
         <svg class="footer_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#81B29A" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
-    </div>
+    </div> 
 
 
 

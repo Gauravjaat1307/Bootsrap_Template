@@ -10,6 +10,7 @@ body{
 
 .container{
     width: 90%;
+    height: 100%;
     margin: auto;
     
 }
@@ -155,6 +156,11 @@ body{
     .navbar_list{display: none;}
     .menu-toggle{display: block;}
 }
+@media (max-width:900px) {
+    .overlay{display: block;}
+    .navbar_list{display: none;}
+    .menu-toggle{display: block;}
+}
 
 
 /*Home Section*/
@@ -165,23 +171,25 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 100px 0px;
-    height: 100vh;
-    min-height: 670px;
+ 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
    
 }
  
-.Home_section_svg1{position: absolute; top: 0px; }
-.Home_section_svg2{position: absolute; bottom: -100px;} 
+ 
 
-.Home_section_maindiv{display: flex; width: 100%; position: absolute; top: 275px; width: 90%;}
+.Home_section_maindiv{display: flex; height: 100%; width: 90%;}
 .Home_section_maindiv1{ padding: 0px 9px;width: 50%;}
 .Home_section_maindiv2{ padding: 0px 9px;width: 50%;  }
-.Home_section_maindiv2_innerdiv1{background-image: url(ground.webp); background-repeat: no-repeat; background-position: center;background-size: cover; width: 400; height: 350px; border-radius: 18px;}
+.Home_section_maindiv2_innerdiv1{background-image: url(ground.webp); background-repeat: no-repeat; background-position: center;background-size: cover; width: 400; height: 350px; border-radius: 18px; display: flex;flex-direction: column;align-items: center;}
 .Home_section_navbar{display: flex; background-color: transparent;}
 .Home_section_maindiv1_heading1{color: white;font-size: 36px;font-weight: 700;margin-bottom: 6px;} 
 .Home_section_maindiv1_heading2{color: white;font-size: 36px;font-weight: 700;margin-bottom: 18px;padding-bottom: 6px;} 
-.Home_button{background: #f2cc8f; color: white; width: 110px; height: 43px; font-size: 14px;font-weight: 700; border: none; border-radius: 18px;}
+.Home_button{background: #f2cc8f; color: white; width: 110px;cursor: pointer; height: 43px; font-size: 14px;font-weight: 700; border: none; border-radius: 18px;}
 .Home_button:hover{background-color: rgb(224, 122, 95);}
 .Home_section_maindiv1_text{font-size: 12px; padding-top: 14px; margin-left: 10px; color: white; font-weight: 500;}
 .Home_section_navbar{padding: 10px; display: flex; align-items: center;gap: 10px; }
@@ -189,33 +197,24 @@ body{
 .watch_icon{display: flex;flex-direction: column; justify-content: center; align-items: center; color: white;font-size: 14px;}
 .share_icon{display: flex;flex-direction: column; justify-content: center; align-items: center; color: white; font-size: 14px;}
 
-@media (min-width:769px) and  (max-width:1025px) {
-    .Home_section_maindiv{position: sticky; width: 100%;}
-    
-}
-@media (max-width:1200px) {
-     .Home_section_svg1{position: absolute;top: 70px !important; } 
-}
-@media (max-width:980px) {
-     .Home_section_svg2{position: absolute;bottom: -250px !important; } 
-}
+/* #overlay{width: 100%; height: 100%; background-color: rgb(0, 0, 0,0.5); top: 0; left:0; bottom: 0;}  */
+
 @media (max-width:769px) {
     .Home_section_maindiv{display: flex; flex-direction: column; gap: 20px;}
     .Home_section_maindiv1_heading1{color: white;font-size: 28px;font-weight: 700;margin-bottom: 6px;} 
     .Home_section_maindiv1{width: 100%;}
     .Home_section_maindiv2{width: 100%;}
-    .Home_section_svg1{position: absolute;top: 70px !important; }
-    .Home_section_svg2{position: absolute;bottom: -250px !important; }  
-    .Home_section_maindiv{position: absolute; top: 120px; width: 90%;} 
+     
+    /* .Home_section_maindiv{position: absolute; top: 120px; width: 90%;}  */
 }
 
 @media (max-width:426px) {
-     .Home_section_svg2{margin-top: 27px !important; } */
+     
 }
 
 
 /*About Section*/
-.About_section{padding-top: 100px;padding-bottom: 70px;}
+.About_section{padding-top: 100px;}
 .About_heading{
     text-align: center; margin-bottom: 36px; font-size: 36px;font-weight: 700;line-height: 43.2px;
 }
@@ -231,26 +230,25 @@ body{
 .name{font-size:24px;font-weight: 500;line-height: 28.8px;}
 .designation{font-size:18px;font-weight: 400;line-height: 27px;color: rgb(113, 114, 117);}
 
-.About_section_below{background-image: url(womenwithgolf.jpg);background-repeat: no-repeat;background-position: center; background-size: cover; height: 623px; padding: ;} 
+.About_section_below{background-image: url(womenwithgolf.jpg);background-repeat: no-repeat;background-position: center; background-size: cover;  padding: ;} 
 .About_section_belowdiv{background-color:rgba(255, 255, 255, 0.75); ;backdrop-filter: blur(5px) saturate(180%);width: 50%;align-items: start;padding: 50px; border-radius: 18px;}
 .About_section_belowdiv_heading{font-size: 36px;font-weight: 700;line-height: 43.2px; margin-bottom: 12px;}
 .About_section_belowdiv_text{font-size: 18px;font-weight: 400;line-height: 27px; margin-bottom: 12px;color: rgb(113, 114, 117);}
 .About_section_form{margin-top: 18px;height: 67px; width: 100%;}
-.About_section_formdiv1{display: flex; padding: 10px 15px;width: 100%;height: 67px;border-radius: 18px; background: white;}
-.Subscribe_button:hover{background-color: rgb(224, 122, 95);}
-.About_section_below_svg1{position: absolute;top: 1391px;}
-.About_section_below_svg2{position: absolute;bottom: -1254px; transform: rotate(180deg);}
+.About_section_formdiv1{display: flex; padding: 10px 15px;width: 100%;height: 67px;border-radius: 24px; background: white;}
+.Subscribe_button{ border-radius: 24px; background: #f2cc8f;font-size: 18px;padding: 10px; color: white; border: none;width: 150px; height: 45px;cursor: pointer; }
+.Subscribe_button:hover{background: rgb(224, 122, 95);}
+
+.About_section_below_svg2{ transform: rotate(180deg);} 
 @media (max-width:1281px) {
-     .About_section_below_svg1{position: absolute;top: 1225px !important;} 
-      
+    
 }
 @media (max-width:1025px) {
-     .About_section_below_svg1{top: 1299px !important;}
-    /* .About_section_below_svg2{ bottom: -1300px !important;}  */
+   
+   
 }
 @media (max-width:980px) {
-    .About_section_below_svg1{top: 1342px !important;}
-    .About_section_below_svg2{ bottom: -1464px !important;}
+   
 }
 
 
@@ -259,8 +257,9 @@ body{
     .About_grid_div1{display: flex; flex-direction: column; gap: 18px;}
     .About_content{width: 100%; margin: 0px !important;}
     .About_section_belowdiv{width: 100%; padding: 30px;}
-    .About_section_below_svg1{position: absolute; top: 1423px !important;}
-    .About_section_below_svg2{position: absolute; bottom: -1546px !important;}
+    .About_images{display: flex; flex-direction: column;}
+    .About_images_frame_content{width: 90%;}
+   
 }
 @media (min-width:770px) and  (max-width:1025px) {
     .About_grid_div1{display: flex; gap: 50px;}
@@ -277,16 +276,12 @@ body{
 @media (max-width:426px) {
     .About_grid_div1{display: flex; flex-direction: column;}
     .About_content{width: 100%; margin: 0px !important;}
-    .About_images{display: flex; flex-direction: column;}
-    .About_images_frame_content{width: 90%;}
      .About_section_belowdiv{width: 100%; padding: 30px;}
-     .About_section_below_svg1{top: 1851px !important;}
-    .About_section_below_svg2{ bottom: -1972px !important;} 
     .About_section{padding-bottom: 70px !important;}
 }
 
 /* Membership section */
-.membership_section{padding: 100px 0px;}
+.membership_section{padding-bottom: 100px ;}
 .membership_heading{text-align: center; font-size: 36px;font-weight:700 ; line-height: 43.2px; margin-bottom:36px;}
 .Membership_section_grid{display: grid; grid-template-columns: repeat(2,1fr);}
 .Membership_section_div1{display: flex; flex-direction: column;}
@@ -296,6 +291,8 @@ body{
 .membership_form{padding: 35px;background: rgb(61, 64, 91); border-radius: 18px;}
 .form_heading{font-size: 24px;font-weight: 500; line-height: 28.8px; margin-bottom: 18px; color: white;}
 .form_div{background: white;border-radius: 18px; width: 100%; margin-bottom: 20px}
+.membership_button{width: 100%; border-radius: 18px;background-color: rgb(242, 204, 143);padding: 10px;font-size: 18px; font-weight: 500; line-height: 27px; color: white;border: none; cursor: pointer;}
+.membership_button:hover{background-color: rgb(224, 122, 95);}
 
 @media (max-width:769px) {
     .membership_section{padding-top: 0px;}
@@ -323,7 +320,7 @@ body{
 .location_span{font-size: 12px;font-weight: 700; line-height: 18px;text-align: start; color: rgb(61, 64, 91);margin-right: 10px; width: 110px; }
 .location_text{font-size: 18px;font-weight: 400; line-height: 27px;text-align: start; color: rgb(113, 114, 117); }
 .button1{background-color: rgb(242, 204, 143);padding: 10px 20px; margin: 2px;color: white; font-size: 14px; font-weight: 700;border: none; border-radius: 12px; cursor: pointer;}
-.button1:hover{background-color: rgb(195, 69, 117);}
+.button1:hover{background-color: rgb(224, 122, 95);}
 
 @media (min-width:426px) and (max-width:769px) {
     .Events_section_maindiv2{display: flex; flex-direction: column;} 
@@ -350,6 +347,8 @@ body{
 .contactus_form_heading{padding-bottom: 6px; margin-bottom: 18px;font-size: 36px;font-weight:700 ; line-height: 43.2px;color: black;}
 .contactus_form_image{display: flex; justify-content: center;align-items: center;width: 50%; }
 .contactus_form_image_innerdiv{position: absolute;}
+.contactus_btn{background-color: #f2cc8f;border-radius: 18px; width: 100%;height: 45px; padding: 10px; color: white;border: none;font-size: 18px;font-weight: 500;line-height: 27px; text-align: center;cursor: pointer;}
+.contactus_btn:hover{background-color: rgb(224, 122, 95);}
 
 @media (max-width:769px) {
     .contactus_form_content{width: 100%;}
